@@ -1832,6 +1832,9 @@ input:focus {
     .account .site-content {
       padding: 100px 0; } }
 
+.customer-account-login .page-title {
+  margin-bottom: 30px; }
+
 .block-customer-login .block-title {
   border-bottom: 2px solid #F15E22 !important; }
 .block-customer-login .note {

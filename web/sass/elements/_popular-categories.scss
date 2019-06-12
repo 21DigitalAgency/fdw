@@ -1,0 +1,170 @@
+.cat-box {
+	display: block;
+	position: relative;
+	margin-bottom: 17px;
+
+	.box-inner {
+		display: flex;
+	    position: absolute;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	    transition: all .3s ease;
+
+		&:before {
+			content:"";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.6);
+			z-index: 5;
+			transition: all .3s ease;
+		}
+
+		a {
+			align-self: center;
+			width: 50%;
+			margin: 0 auto;
+			font-size: 12px;
+		}
+
+		&:hover {
+
+			&:before {
+				background-color: rgba(241,94,34,.9);
+			}
+
+			.category-name {
+				transform: translateY(0);
+				color: $white;
+			}
+
+			.category-text {
+				transform: translateY(0);
+				opacity: 1;
+				color: $white;
+
+				a {
+					padding: 15px 25px!important;
+					&:hover {
+						background-color: $black!important;
+					}
+				}
+			}
+		}
+	}
+
+	img {
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+
+	.category-name {
+		position: relative;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		transform: translateY(65px);
+		transition: all .3s ease;
+		z-index: 10;
+		font-family: $custom-font1;
+
+		a {
+			color: $white;
+			font-size: 24px!important;
+			font-weight: 600;
+			text-decoration: none;
+		}
+	}
+
+	.category-text {
+		position: relative;
+		z-index: 10;
+		transform: translateY(100px);
+		opacity: 0;
+		transition: all .3s ease;
+
+		p {
+			font-size: 14px;
+			max-width: 70%;
+    		text-align: center;
+    		margin: 0 auto 30px auto;
+    		color: $white;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.cat-box {
+		margin-bottom: 8px;
+
+		.box-inner {
+
+			a {
+				font-size: 14px;
+			}
+		}
+
+		.category-name {
+			transform: translateY(0);
+		}
+
+		.category-text {
+
+			transform: translateY(0);
+    		opacity: 1;
+
+			p {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.col-sm-6 { /* Changing this bootstrap class as we need some margin between blocks */
+		flex: 0 0 49.5%;
+    	max-width: 49.5%!important;
+    	margin-right: 1%!important;
+
+    	&:nth-of-type(2n) {
+    		margin-right: 0!important;
+    	}
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.cat-box {
+		margin-bottom: 17px;
+
+		.category-name {
+			transform: translateY(65px);
+			opacity: 1;
+
+			a {
+				font-size: 34px!important;
+			}
+		}
+
+		.category-text {
+			transform: translateY(100px);
+    		opacity: 0;
+		}
+
+		.box-inner {
+			&:hover {
+				.category-name {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}

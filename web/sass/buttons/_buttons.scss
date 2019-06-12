@@ -1,0 +1,70 @@
+.btn {
+	display: block;
+	position: relative;
+	width: auto;
+	border: 1px solid;
+	padding: 15px 45px;
+	text-align: center;
+	border-radius: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .3s ease;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: $custom-font1;
+}
+
+button {
+	font-family: $custom-font1;
+}
+
+.orange-solid {
+	@extend .btn;
+	border-color: $brand1;
+	background-color: $brand1;
+	color: $white;
+
+	&:hover {
+		border-color: $brand1;
+		color: $brand1;
+		background-color: transparent;
+	}
+}
+
+.orange-outline {
+	@extend .btn;
+	border-color: $brand1;
+	background-color: transparent;
+	color: $brand2;
+
+	&:hover {
+		border-color: $brand1;
+		background-color: $brand1;
+		color: $white;
+	}
+}
+
+.white-outline {
+	@extend .btn;
+	border-color: $white;
+	background-color: transparent;
+	color: $white;
+
+	&:hover {
+		border-color: $brand1;
+		background-color: $brand1;
+		color: $white;
+	}
+}
+
+@media (min-width: 768px) {
+	.btn {
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.btn {
+		font-size: 16px;
+	}
+}

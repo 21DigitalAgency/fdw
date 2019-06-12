@@ -1,0 +1,471 @@
+.site-header {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $white;
+	width: 100%;
+	height: $mobile-header--height;
+	border-top: 10px solid $brand1;
+	padding: 0;
+	z-index: 50;
+	transition: all 0.3s ease;
+
+	li {
+		flex: 1;
+		list-style-type: none;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 12px;
+		}
+
+		small {
+			font-size: 11px;
+		}
+	}
+}
+
+.nav-up {
+	transform: translateY(-$mobile-header--height);
+}
+
+.site-logo {
+	padding: 15px;
+
+	img {
+		width: 220px;
+	}
+}
+
+.site-search {
+
+	form {
+		display: flex;
+		width: 100%;
+	}
+
+	input {
+		width: 87%;
+		border: 1px solid $light-grey;
+		border-right: 0;
+	}
+
+	button {
+		width: 13%;
+		border: 1px solid $light-grey;
+		border-left: 1px solid $light-grey;
+		background-color: $white;
+
+		img {
+			display: inline-block;
+		}
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $brand2;
+	  text-transform: none;
+	  font-size: 16px;
+	  font-weight: normal;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: $brand2;
+	  text-transform: none;
+	  font-size: 16px;
+	  font-weight: normal;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: $brand2;
+	  text-transform: none;
+	  font-size: 16px;
+	  font-weight: normal;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: $brand2;
+	  text-transform: none;
+	  font-size: 16px;
+	  font-weight: normal;
+	}
+}
+
+#mobile-search-form {
+    display: none;
+    text-align: center;
+    background: $white;
+    color: $black;
+    padding: 10px;
+
+    form {
+		display: flex;
+		width: 100%;
+	}
+
+	input {
+		width: 87%;
+		border: 1px solid $light-grey;
+		border-right: 0;
+	}
+
+	button {
+		width: 20%;
+		border: 1px solid $light-grey;
+		border-left: 1px solid $light-grey;
+		background-color: $white;
+
+		img {
+			display: inline-block;
+		}
+	}
+}
+
+.header-actions {
+
+	li {
+		flex: 1;
+		align-items: center;
+		font-family: $custom-font1;
+	}
+
+	a {
+		&:hover {
+			color: $brand1;
+		}
+	}
+}
+
+.mobile-header {
+	border-top: 1px solid $light-grey;
+	transition: top 0.2s ease-in-out;
+
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-right: 1px solid $light-grey;
+		padding: 20px 0;
+
+		&:last-of-type {
+			border-right: 0;
+		}
+
+		a {
+			font-size: 10px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.site-header {
+		padding: 20px 0;
+		height: $tablet-header--height;
+	}
+
+	.nav-up {
+		transform: translateY(-$tablet-header--height);
+	}
+
+	.site-logo {
+
+		img {
+			width: 320px;
+		}
+	}
+
+	.site-search {
+
+		input {
+			width: 80%;
+			font-size: 12px;
+		}
+
+		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			 font-size: 12px;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+			font-size: 12px;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+			font-size: 12px;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+			 font-size: 12px;
+		}
+
+		button {
+			width: 20%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.site-search {
+
+		input {
+			width: 85%;
+		}
+
+		button {
+			width: 15%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.site-header {
+		height: $desktop-header--height;
+		padding: $global-padding 0;
+
+		li {
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.nav-up {
+		transform: translateY(-$desktop-header--height);
+	}
+
+	.site-search {
+
+		input {
+			font-size: 14px;
+		}
+
+		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			 font-size: 14px;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+			font-size: 14px;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+			font-size: 14px;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+			 font-size: 14px;
+		}
+
+	}
+}
+
+.action-auth-toggle {
+	display: block;
+}
+
+.site-search {
+	input {
+	    width: 87%;
+	    border: 1px solid #eee;
+	    border-right: 0;
+	}
+}
+
+.site-search {
+	button {
+	    width: 13%;
+	    border: 1px solid #eee;
+	    border-left: 1px solid #eee;
+	    background-color: #fff;
+	    box-shadow: none;
+	}
+}
+
+.header-actions {
+	li {
+	    flex: 1;
+	    align-items: center;
+	    font-family: "Avenir";
+	    position: relative;
+	    margin-bottom: 0;
+	    list-style-type: none;
+	    text-align: center;
+	}
+}
+
+.header-actions {
+	li {
+		&:first-of-type {
+			&:before {
+			    content: "";
+			    position: relative;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    margin: 0 auto;
+			    background-image: url(http://fdw.21digital.agency/pub/media/icons/account.png);
+			    background-repeat: no-repeat;
+			    background-size: auto;
+			    background-position: center;
+			}
+		}
+	}
+}
+
+.site-header {
+	li {
+		a {
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    font-weight: 600;
+		    font-size: 12px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.site-header {
+		li {
+			a {
+	    		font-size: 14px;
+	    	}
+	    }
+	}
+}
+
+.header-actions {
+	li {
+		&:first-of-type {
+			a {
+				&:after {
+				    content: "View Account";
+				    position: relative;
+				    display: block;
+				    width: 100%;
+				    text-align: center;
+				    font-size: 11px;
+				    text-transform: none;
+				    font-weight: normal;
+				}
+			}
+		}
+	}
+}
+
+.header-actions {
+	li {
+		&:last-of-type {
+			&:before {
+			    content: "";
+			    position: relative;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    margin: 0 auto;
+			    background-image: url(http://fdw.21digital.agency/pub/media/icons/account.png);
+			    background-repeat: no-repeat;
+			    background-size: auto;
+			    background-position: center;
+			}
+		}
+	}
+}
+
+.header-actions {
+	li {
+		&:last-of-type {
+			a {
+				&:after {
+				    content: "or Register";
+				    position: relative;
+				    display: block;
+				    width: 100%;
+				    text-align: center;
+				    font-size: 11px;
+				    text-transform: none;
+				    font-weight: normal;
+				}
+			}
+		}
+	}
+}
+
+.minicart-wrapper {
+    margin-left: 0 !important;
+    text-align: center !important;
+    padding-right: 15px !important;
+}
+
+.minicart-wrapper .action.showcart:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    font-family: serif !important;
+    margin-bottom: 0;
+    background-image: url(http://fdw.21digital.agency/pub/media/icons/checkout.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.minicart-wrapper .action.showcart .text {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    clip: unset !important;
+    height: auto !important;
+    font-family: "Avenir";
+    overflow: visible !important;
+}
+
+.minicart-wrapper .action.showcart .counter.qty {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    display: block !important;
+    margin: 0 auto !important;
+    position: relative;
+    order: 3;
+}
+
+.minicart-wrapper .action.showcart .counter-number {
+    font-size: 11px;
+    font-weight: 600;
+    color: #000;
+    text-shadow: none !important;
+    font-family: "Avenir";
+}
+
+.minicart-wrapper .action.showcart .counter-label {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Avenir";
+    height: auto !important;
+    clip: unset !important;
+}
+
+@media (min-width: 1200px) {
+	.minicart-wrapper .action.showcart .counter-label {
+	    font-size: 14px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.minicart-wrapper .action.showcart .text {
+	    font-size: 14px;
+
+	    &:hover {
+	    	color: $brand1;
+	    }
+	}
+}
+
+
+@media (min-width: 768px) {
+	.ammenu-main-container .ammenu-item.-main > .ammenu-link {
+	    position: relative;
+	    font-size: 18px;
+	}
+}

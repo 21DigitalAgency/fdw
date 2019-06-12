@@ -1,0 +1,46 @@
+.container-fluid { /* Remove paddings from this bootstrap container, we will add our own paddings if needed */
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+.centered-content {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: $global-container-width;
+	margin: 0 auto;
+	/*border-left: 2px dashed red;
+	border-right: 2px dashed red;*/
+}
+
+.element-title {
+	display: block;
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	max-width: 80%;
+	font-size: $heading_h1-mobile;
+	margin: 0 auto 20px auto;
+	font-family: $custom-font1;
+	font-weight: 600;
+}
+
+@media (min-width: 768px) {
+
+	.button-container {
+		padding: $global-padding 0 0 0;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.element-title {
+		font-size: $heading_h1;
+	}
+}
+
+.message {
+	max-width: 1250px;
+	margin: 0 auto 10px auto!important;
+}

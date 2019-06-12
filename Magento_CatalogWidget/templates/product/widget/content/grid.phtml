@@ -1,0 +1,97 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\App\Action\Action;
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
+?>
+<?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())): ?>
+    <?php
+    $type = 'widget-product-grid';
+
+    $mode = 'grid';
+
+    $image = 'new_products_content_widget_grid';
+    $items = $block->getProductCollection()->getItems();
+
+    $showWishlist = true;
+    $showCompare = true;
+    $showCart = true;
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    $description = false;
+    ?>
+
+<ul class="prod-carousel">
+    <?php $iterator = 1; ?>
+    <?php foreach ($items as $_item): ?>
+        <?= /* @noEscape */ ($iterator++ == 1) ? '<li>' : '</li><li>' ?>
+        <div class="product-details">
+            <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>">
+                <?= $block->getImage($_item, $image)->toHtml() ?>
+            </a>
+
+            <h4>
+              <a title="<?= $block->escapeHtml($_item->getName()) ?>" href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>">
+                <?= $block->escapeHtml($_item->getName()) ?>
+              </a>
+            </h4>
+
+            <?php if ($templateType): ?>
+                <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
+            <?php endif; ?>
+
+            <?= $block->getProductPriceHtml($_item, $type) ?>
+
+            <?= $block->getProductDetailsHtml($_item) ?>
+
+            <a class="btn orange-outline" href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>">View Product</a>
+
+        </div>
+        <?= ($iterator == count($items) + 1) ? '</li>' : '' ?>
+    <?php endforeach ?>
+</ul>
+
+<script type="text/javascript" space="xml">
+require([
+    'jquery',
+    'Magento_Theme/js/slick.min'
+], function ($) {
+  $('.prod-carousel').slick({
+    autoplay: true,
+    slidesToShow: 4,
+    arrows: true,
+    autoplaySpeed: 9000,
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: true,
+        slidesToShow: 3,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        arrows: true,
+        slidesToShow: 2,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 1,
+        dots: false,
+        arrows: true
+      }
+    }
+  ]
+  });
+});
+</script>
+<?php endif;?>

@@ -1,0 +1,245 @@
+.cart-empty {
+	padding: 0 20px!important;
+
+	p {
+		font-size: 14px;
+	}
+
+	@media(min-width: 1200px) {
+		padding: 0!important;
+
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+.block-minicart {
+
+	.action.primary {
+		background-color: $brand1!important;
+		border: 1px solid $brand1!important;
+	}
+
+	.items-total {
+		font-size: 14px!important;
+	}
+
+	.subtotal {
+
+		.label {
+			font-size: 14px;
+		}
+
+		.price {
+			color: $brand1!important;
+		}
+	}
+
+	.minimal-price-link, 
+	.price-excluding-tax, 
+	.price-including-tax {
+		text-align: left!important;
+	}
+}
+
+.minicart-wrapper .action.showcart.active:before {
+	content: ""!important;
+}
+
+.minicart-wrapper .action.showcart .counter-number {
+    font-size: 11px;
+    font-weight: 600;
+    color: #000;
+    text-shadow: none !important;
+    font-family: "Avenir";
+}
+
+.minicart-wrapper .action.showcart .counter-label {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Avenir";
+    height: auto !important;
+    clip: unset !important;
+}
+
+@media (min-width: 1200px) {
+	.minicart-wrapper .action.showcart .counter-label {
+	    font-size: 14px;
+	}
+}
+
+.minicart-items .product-item-name {
+	text-align: left!important;
+
+	a {
+		color: $brand1!important;
+	}
+}
+
+.minicart-items .product-item-details .details-qty {
+	text-align: left!important;
+}
+
+.checkout-cart-index {
+
+	.columns {
+		background-color: $light-grey;
+	}
+
+	.cart-container {
+		margin: 0 20px;
+		@media(min-width: 1200px) {
+			margin: 0;
+		}
+
+		.form-cart {
+			background-color: #fff;
+			padding-right: 0!important;
+			margin-right: 4%!important;
+			width: 100%!important;
+
+			@media(min-width: 768px) {
+				width: 71%!important;
+			}
+
+			thead {
+				background-color: #000;
+				color: $white!important;
+				text-transform: uppercase;
+				font-size: 16px!important;
+			}
+
+			th.col {
+				padding: 15px!important;
+			}
+
+			.actions-toolbar {
+				right: 15px;
+				padding-bottom: 30px!important;
+			}
+
+			td {
+				.price {
+					color: $brand1!important;
+				}
+			}
+		}
+
+		.cart-summary {
+			padding: 0 0 25px 0!important;
+			background-color: $white;
+
+			.summary.title {
+				background-color: $black;
+				color: $white!important;
+				text-transform: uppercase;
+				font-size: 16px!important;
+				padding: 15px!important;
+				font-weight: 600;
+				margin-top: 0!important;
+			}
+
+			#block-shipping {
+				margin: 0 15px;
+
+				.title {
+					padding: 15px 0!important;
+				}
+
+				.content {
+					font-size: 14px!important;
+				}
+
+				select {
+					height: 55px;
+				}
+
+				input[type="text"] {
+					border: 1px solid #ccc;
+				}
+			}
+
+			.cart-totals {
+				margin: 0 15px;
+				font-weight: 600;
+
+				.amount {
+					font-size: 1.8rem!important;
+				}
+			}
+
+			.mark, mark {
+				background-color: transparent!important;
+				font-size: 1.8rem!important;
+			}
+
+			button {
+				margin: 0 15px;
+				background-color: $brand1!important;
+				border: 1px solid $brand1!important;
+				width: calc(100% - 30px)!important;
+				text-transform: uppercase;
+			}
+
+			.multicheckout {
+				font-size: 14px!important;
+			}
+		}
+	}
+}
+
+
+.cart-container .form-cart .actions.main {
+    padding-bottom: 20px;
+    padding-right: 20px;
+
+    button {
+    	background-color: $brand1!important;
+    	border: 1px solid $brand1!important;
+    	color: $white!important;
+    	text-transform: uppercase;
+    	box-shadow: none!important;
+    	font-size: 14px!important;
+    	padding: 15px!important;
+    }
+}
+
+
+@media (min-width: 768px) {
+	.cart.table-wrapper .product-item-photo {
+		width: 20%!important;
+		padding-left: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.cart-summary .block > .title:after {
+	    top: 15px;
+	}
+}
+
+.cart-discount {
+
+	strong {
+		color: $brand1!important;
+	}
+
+	.discount {
+		width: 100%!important;
+	}
+
+	button {
+		height: 52px;
+    	background-color: $brand1!important;
+    	border: 1px solid $brand1!important;
+    	box-shadow: none!important;
+    	color: #fff!important;
+    	text-transform: uppercase;
+    	font-weight: 800;
+	}
+}

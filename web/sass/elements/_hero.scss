@@ -1,0 +1,18 @@
+.hero {
+	border-bottom: 5px solid $brand1;
+
+	img {
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.hero {
+		overflow-x: none;
+	}
+}
+
+.page-hero {
+	margin-bottom: $global-padding;
+	width: 100%;
+}

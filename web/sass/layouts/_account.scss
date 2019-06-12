@@ -1,0 +1,301 @@
+.customer-account-login,
+.customer-account-create,
+.account {
+
+	.site-content {
+		padding: 100px 20px;
+    	max-width: 1280px;
+    	margin: 0 auto;
+    	width: 100%;
+
+    	@media(min-width:1200px) {
+    		padding: 100px 0;
+    	}
+	}
+}
+
+.block-customer-login {
+
+	.block-title {
+		border-bottom: 2px solid $brand1!important;
+	}
+
+	.note {
+		font-size: 12px;
+	}
+
+	label {
+		font-size: 14px!important;
+	}
+
+	input {
+		border: 1px solid #ccc!important;
+		height: 50px;
+	}
+
+	button {
+		background-color: $brand1!important;
+		border: 1px solid $brand1!important;
+		color: $white!important;
+		font-size: 14px!important;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0!important;
+		margin-right: 20px!important;
+	}
+
+	.remind {
+		font-size: 12px!important;
+	}
+}
+
+.block-new-customer {
+
+	.block-title {
+		border-bottom: 2px solid $brand1!important;
+	}
+
+	p {
+		font-size: 12px;
+	}
+
+	.create {
+		background-color: $brand1!important;
+		border: 1px solid $brand1!important;
+		color: $white!important;
+		font-size: 14px!important;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0!important;
+		margin-right: 20px!important;
+		border-radius: 0!important;
+	}
+}
+
+.customer-account-create  {
+
+	.account {
+
+		legend {
+			font-family: $custom-font1;
+			font-weight: 600;
+			border-bottom: 2px solid $black!important;
+		}
+
+		label {
+			font-size: 14px!important;
+		}
+
+		input {
+			border: 1px solid #ccc!important;
+			height: 50px;
+		}
+
+		
+		button {
+			background-color: $brand1!important;
+			border: 1px solid $brand1!important;
+			color: $white!important;
+			font-size: 14px!important;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin: 0!important;
+			margin-right: 20px!important;
+		}
+	}
+}
+
+.account {
+
+	.sidebar {
+
+		li {
+			display: block;
+			position: relative;
+			width: 100%;
+
+			a {
+				&:hover {
+					background-color: transparent!important;
+				}
+			}
+		}
+
+		a {
+			font-size: 14px;
+			color: #000!important;
+		}
+
+		.current {
+			font-size: 14px;
+			strong {
+				color: $brand1!important;
+			}
+		}
+	}
+
+	.delimiter {
+		border-top: 1px solid $brand1!important;
+	}
+
+	.block-dashboard-info,
+	.block-dashboard-addresses,
+	.form-address-edit,
+	.form-edit-account {
+
+		.block-title,
+		legend {
+			border-bottom: 2px solid $black!important;
+			font-family: $custom-font1;
+			font-size: 18px!important;
+		}
+
+		label {
+			font-size: 14px;
+		}
+
+		input,
+		select {
+			border: 1px solid #ccc;
+			height: 50px;
+		}
+
+		select {
+			font-size: 14px;
+		}
+
+		input[type="checkbox"] {
+			height: auto;
+		}
+
+		.choice {
+			display: flex;
+			align-items: center;
+
+			span {
+				position: relative;
+				top: 3px;
+			}
+		}
+
+		a {
+			color: $brand1!important;
+			font-size: 14px;
+		}
+
+		button {
+			background-color: $brand1!important;
+			border: 1px solid $brand1!important;
+			color: $white!important;
+			font-size: 14px!important;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin: 0!important;
+			margin-right: 20px!important;
+		}
+
+		.password-info {
+			font-size: 12px;
+
+			a {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.block-dashboard-orders {
+
+	.order {
+		border-bottom: 0!important;
+	}
+
+	.view {
+		color: #F15E22 !important;
+    	font-size: 14px;
+	}
+}
+
+.table-order-items {
+
+	thead {
+		background-color: $black;
+		color: $white;
+		font-size: 14px;
+	}
+
+	td {
+		border-top: 0!important;
+	}
+
+	tr {
+		font-size: 14px;
+
+		a {
+			color: $brand1;
+		}
+	}
+
+	tbody {
+		tr {
+			&:nth-of-type(even) {
+				background-color: #eee;
+			}
+		}
+	}
+}
+
+.order-details-items .col.name {
+	padding-top: 0!important;
+}
+
+.block-reorder {
+	button {
+		background-color: $brand1!important;
+		border: 1px solid $brand1!important;
+		color: $white!important;
+		font-size: 14px!important;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0!important;
+		margin-right: 20px!important;
+	}
+}
+
+.order-status {
+	margin-bottom: 20px!important;
+}
+
+.order-date,
+.order-actions-toolbar,
+.order-links {
+	font-size: 14px;
+
+	a {
+		color: $brand1;
+	}
+}
+
+.table-order-items {
+	.mark,
+	mark {
+		background-color: transparent!important;
+	}
+}
+
+.table-order-items {
+	.name {
+		padding-top: 20px!important;
+	}
+}
+
+.block-order-details-view {
+	.box {
+		font-size: 14px;
+
+		a {
+			pointer-events: none;
+			text-decoration: none;
+		}
+	}
+}

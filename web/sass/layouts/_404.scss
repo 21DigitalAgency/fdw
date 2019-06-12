@@ -1,0 +1,39 @@
+.cms-no-route .site-content {
+    padding: 100px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+	.cms-no-route .site-content {
+	    padding: 100px 0;
+	}
+}
+
+.cms-no-route {
+	.main {
+		font-size: 14px;
+	}
+}
+
+.cms-no-route .site-content a {
+    color: #F15E22;
+}
+
+.cms-no-route .site-content a:visited {
+    color: #F15E22;
+}
+
+.cms-no-route {
+	.sidebar {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.disc {
+	li {
+		list-style-position: inside;
+	}
+}

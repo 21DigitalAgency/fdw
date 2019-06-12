@@ -1,0 +1,159 @@
+.help-advice {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-color: $light-grey;
+	padding: $global-padding 0;
+
+	h3 {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.button-container {
+		padding-top: $global-padding;
+	}
+}
+
+.advice-blocks {
+	padding: 0 20px;
+}
+
+.text-container {
+	padding: 20px 0;
+}
+
+.advice-block {
+	background-color: $white;
+	margin-right: 1%;
+	padding: 10px!important;
+	margin-bottom: 15px;
+
+	&:nth-of-type(2n) {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+
+	.date {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	h4 {
+		margin-top: 5px;
+		margin-bottom: 15px;
+		text-transform: none;
+		font-weight: 600;
+		font-size: 20px;
+
+		a {
+			color: $black;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	p {
+		line-height: 18px;
+		margin-bottom: 20px;
+		color: $brand3;
+		font-size: 14px;
+	}
+
+	.readmore {
+		color: $brand1;
+		font-size: 14px;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+@media(min-width: 768px) {
+
+	.help-advice {
+		padding: 50px 15px;
+	}
+
+	.advice-blocks {
+		padding: 0 ;
+	}
+
+	.text-container {
+		padding: 0 0 0 15px;
+	}
+
+	.advice-block { /* Changing this bootstrap class as we need some margin between blocks */
+		max-width: 49.5%!important;
+		flex: 1 0 49.5%!important;
+		margin-bottom: 0;
+
+		.date {
+			font-size: 10px;
+			margin-bottom: 5px;
+		}
+
+		h4 {
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+
+		p {
+			line-height: 14px;
+			margin-bottom: 0;
+			font-size: 12px;
+		}
+
+		.readmore {
+			font-size: 12px;
+		}
+	}
+}
+
+@media(min-width: 992px) {
+
+	.text-container {
+		padding: 0 20px;
+	}
+
+	.advice-block {
+		margin-bottom: 0;
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+
+		.date {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+
+		h4 {
+			margin-bottom: 15px;
+			font-size: 20px;
+		}
+
+		p {
+			line-height: 18px;
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+
+		.readmore {
+			font-size: 16px;
+		}
+	}
+}
+
+@media(min-width: 1200px) {
+
+	.help-advice {
+		padding: 50px 0;
+	}
+}

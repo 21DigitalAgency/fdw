@@ -1,0 +1,126 @@
+html {
+  overflow-x: hidden;
+  overflow-y: scroll; /* Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally. */
+  min-height: 100%; /* Ensure the page always fills at least the entire height of the viewport. */
+  -webkit-text-size-adjust: 100%; /*  Prevent certain mobile browsers from automatically zooming fonts. */
+  -ms-text-size-adjust: 100%; /*  Prevent certain mobile browsers from automatically zooming fonts. */
+  -moz-osx-font-smoothing: grayscale; /* Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing. */
+  -webkit-font-smoothing: antialiased; /* Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing. */
+ /*! autoprefixer: off */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    /*! autoprefixer: off */
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+}
+
+body {
+  margin: 0;
+  padding: $mobile-header--height 0 0 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: $tablet-header--height 0 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: $desktop-header--height 0 0 0;
+  }
+}
+
+img {
+  display: block;
+  position: relative;
+}
+
+a {
+  text-decoration: underline;
+  color: $link_colour;
+
+  &:hover,
+  &:focus {
+    color: $link_hover;
+  }
+}
+
+.grey-bg {
+  background-color: $light-grey;
+}
+
+.white-bg {
+  background-color: $white;
+}
+
+blockquote {
+
+  p { 
+    margin: 0; 
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $custom-font1;
+  }
+}
+
+blockquote {
+  p + p { 
+    margin-top: .5em; 
+  }
+}
+
+blockquote.marks {
+  quotes: "“""”""‘""’";
+  text-align: right;
+}  
+
+blockquote.marks:before {  
+  content: open-quote;
+  color: #666;
+  font-size: 34px;
+  line-height: 34px;
+  /*margin-right: .25em;*/
+}
+
+blockquote.marks:after  { 
+  content: close-quote;
+  color: #666;
+  font-size: 34px;
+  line-height: 34px;
+  /*margin-left: .25em;*/
+}
+
+blockquote.marks p {  
+  display: inline;
+}
+
+@media (min-width: 1200px) {
+
+  blockquote {
+
+    p { 
+      margin: 0; 
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}
+
+.block-reorder {
+  display: none;
+  visibility: hidden;
+}

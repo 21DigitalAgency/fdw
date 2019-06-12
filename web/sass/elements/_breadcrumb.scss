@@ -1,0 +1,63 @@
+.breadcrumb {
+	background-color: $white;
+	margin-bottom: 0!important;
+
+	ul {
+		display: flex;
+		align-items: center;
+		padding: 0 15px;
+	}
+
+	span {
+		display: inline-block;
+		margin: 0 5px;
+		color: $brand3;
+		font-family: $custom-font1;
+		font-size: 10px;
+	}
+
+	li {
+		list-style-type: none;
+		display: block;
+		position: relative;
+		text-transform: uppercase;
+		font-size: 10px;
+		line-height: 27px;
+		color: $brand3;
+		font-family: $custom-font1;
+		margin-bottom: 0;
+
+		strong {
+			margin-left: 15px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $brand3;
+		font-size: 10px;
+
+		&:hover {
+			color: $brand1;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.breadcrumb {
+
+		li {
+			font-size: 12px;
+		}
+
+		span {
+		    font-size: 12px;
+		    margin: 0 10px;
+		}
+
+		a {
+			font-size: 12px;
+		}
+	}
+}

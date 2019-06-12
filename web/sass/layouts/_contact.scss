@@ -1,0 +1,42 @@
+.contact-container {
+
+	padding: $global-padding 15px;
+
+	h2 {
+		text-align: center;
+		margin-bottom: $global-padding;
+	}
+
+	label {
+		font-weight: 600;
+		text-transform: uppercase;
+		font-family: $custom-font1;
+	}
+
+	input,
+	textarea {
+		background-color: $light-grey;
+		border-radius: 0;
+		border: none;
+	}
+
+	textarea {
+		min-height: 300px;
+	}
+
+	button {
+		margin: $global-padding auto 0 auto!important;
+	}
+}
+
+@media (min-width: 768px) {
+	.contact-container {
+		padding: $global-padding 30px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact-container {
+		padding: $global-padding 0;
+	}
+}

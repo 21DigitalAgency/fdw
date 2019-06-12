@@ -1,0 +1,17 @@
+.catalogsearch-result-index {
+    .site-content {
+        padding: 100px 20px;
+        max-width: 1280px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalogsearch-result-index {
+
+        .site-content {
+            padding: 100px 0;
+        }
+    }
+}

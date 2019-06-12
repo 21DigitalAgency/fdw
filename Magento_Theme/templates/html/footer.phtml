@@ -1,0 +1,45 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="footer-cols d-flex flex-column flex-md-row">
+
+  <div class="footer-col col-12 col-md-4">
+    <span>Contact Details</span>
+    <ul>
+      <address>
+        Contact our sales team today, <br> call 01282 717171 - or email <br> <a href="#">sales@protec.co.uk</a>
+      </address>
+    </ul>
+  </div><!-- end footer col -->
+
+  <div class="footer-col col-12 col-md-4">
+    <span>Customer Services</span>
+    <div class="two-col-links d-flex flex-row">
+      <ul class="col-6">
+        <li><a href="<?php echo $this->getUrl('contact'); ?>">Contact Us</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="<?php echo $this->getUrl('returns'); ?>">Returns</a></li>
+        <li><a href="#">Payment</a></li>
+        <li><a href="<?php echo $this->getUrl('faqs'); ?>">FAQ's</a></li>
+        <li><a href="<?php echo $this->getUrl('about'); ?>">About Us</a></li>
+      </ul>
+      <ul class="col-6">
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="<?php echo $this->getUrl('terms-conditions'); ?>">Terms</a></li>
+      </ul>
+    </div>
+  </div><!-- end footer col -->
+
+  <div class="footer-col col-12 col-md-4">
+    <span>Payment Methods</span>
+    <img class="img-fluid" src="<?php echo $this->getViewFileUrl('images/icons/payment-method.png'); ?>">
+  </div><!-- end footer col -->
+
+</div><!-- end footer cols -->

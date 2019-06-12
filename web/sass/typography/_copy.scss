@@ -1,0 +1,10 @@
+p {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+	p {
+	    font-size: 16px;
+	}
+}

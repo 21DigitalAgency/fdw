@@ -1,0 +1,136 @@
+.product-tabs {
+	display: block;
+	position: relative;
+	margin-top: $global-padding;
+	padding: 0 30px;
+
+	nav {
+		border-top: 1px solid #ccc;
+	}
+
+	.nav-tabs {
+		border-bottom: 0!important;
+
+		.active {
+			color: $brand1;
+		}
+	}
+
+	.nav-item {
+		margin-bottom: 0!important;
+		padding: 20px 15px!important;
+	}
+
+	.nav-link {
+		border: 0!important;
+    	border-top-left-radius: 0!important;
+    	border-top-right-radius: 0!important;
+    	text-transform: uppercase;
+    	text-decoration: none;
+    	font-family: $custom-font1;
+    	width: 100%;
+	}
+
+	.active {
+		border: 0!important;
+		font-weight: 800;
+	}
+}
+
+.tabs-container {
+	background-color: $light-grey;
+}
+
+.tab-content {
+	padding: $global-padding 15px;
+
+	h4 {
+		font-size: 22px;
+		margin-bottom: 30px;
+		font-weight: 600;
+	}
+
+	.active {
+		font-weight: normal;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.product-tabs {
+		
+		.nav-link {
+			font-size: 14px;
+			width: auto;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.product-tabs {
+		.nav-item {
+			padding: 20px 55px 20px 20px!important;
+		}
+		.nav-link {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.product-tabs {
+		padding: 0;
+	}
+}
+
+.product.data.items > .item.title.active > .switch {
+    border: 0 !important;
+    border-bottom: 2px solid #F15E22 !important;
+    font-weight: 600 !important;
+}
+
+.product.data.items > .item.title > .switch {
+    border: 0 !important;
+    background-color: transparent !important;
+    font-size: 18px !important;
+}
+
+.product.data.items > .item.content {
+    border: 0 !important;
+}
+
+.product.data.items > .item.content p {
+    font-size: 16px !important;
+}
+
+.product.data.items tr {
+
+	font-size: 14px!important;
+
+	&:nth-of-type(even) {
+		background-color: #eee;
+	}
+}
+
+.review-form input {
+    border: 1px solid #ccc !important;
+}
+
+.review-form textarea {
+    min-height: 200px !important;
+}
+
+.review-form label {
+    font-size: 16px !important;
+}
+
+.review-form .action.submit.primary {
+    background-color: #F15E22 !important;
+    border: 1px solid #F15E22 !important;
+    color: #fff !important;
+    font-family: "Avenir" !important;
+    font-size: 20px !important;
+    padding: 15px 25px !important;
+}

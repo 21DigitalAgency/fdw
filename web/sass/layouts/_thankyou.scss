@@ -1,0 +1,61 @@
+.checkout-onepage-success {
+
+	.site-content {
+		padding: 100px 20px;
+    	max-width: 1280px;
+    	margin: 0 auto;
+    	width: 100%;
+
+    	@media(min-width: 1200px) {
+    		padding: 100px 0;
+    	}
+	}
+
+	.checkout-success {
+		font-size: 20px;
+
+		span,
+		strong {
+			color: $brand1;
+		}
+
+		.print {
+			color: $brand1;
+		}
+	}
+
+	.primary {
+		background-color: $brand1!important;
+		border: 1px solid $brand1!important;
+		color: $white!important;
+		font-size: 14px!important;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0!important;
+
+		span {
+			color: $white!important;
+		}
+	}
+
+
+	input[type="submit"] {
+		background-color: $brand1!important;
+		border: 1px solid $brand1!important;
+		color: $white!important;
+		font-size: 14px!important;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 15px!important;
+		box-shadow: none!important;
+		border-radius: 0!important;
+
+		span {
+			color: $white;
+		}
+	}
+
+	#registration {
+		font-size: 16px;
+	}
+}

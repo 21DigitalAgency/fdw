@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+      <referenceContainer name="category.view.container" htmlClass="cat-intro grey-bg">
+        <container name="category.description.wrap" as="category.description.wrap" htmlTag="div" htmlClass="centered-content" before="-"/>
+      </referenceContainer>
+
+      <move element="page.main.title" destination="category.description.wrap" before="-"/>
+      <move element="category.description" destination="category.description.wrap" after="page.main.title"/>
+
+      <referenceContainer name="columns" htmlClass="products-container">
+        <container name="products.centered" as="products.centered" htmlTag="div" htmlClass="centered-content" before="-">
+          <container name="products.centered.container" as="products.centered.container" htmlTag="div" htmlClass="col-2-container sub-category d-flex flex-column flex-md-row" before="-"/>
+        </container>
+      </referenceContainer>
+
+
+      <move element="div.sidebar.main" destination="products.centered.container" before="-"/>
+      <referenceContainer name="div.sidebar.main" htmlClass="col-sidebar col-12 col-md-4 col-xl-3"/>
+
+      <move element="main" destination="products.centered.container" after="div.sidebar.main"/>
+      <referenceContainer name="main" htmlClass="col-products col-12 col-md-8 col-xl-9"/>
+
+      <referenceContainer name="page.wrapper">
+        <container name="key.messages.footer" as="key.messages.footer" htmlTag="div" htmlClass="bottom-messages grey-bg" before="newsletter-signup"/>
+      </referenceContainer>
+
+      <referenceContainer name="key.messages.footer">
+        <block class="Magento\Cms\Block\Block" name="key.messages">
+            <arguments>
+                <argument name="block_id" xsi:type="string">key_messages</argument>
+            </arguments>
+        </block>
+      </referenceContainer>
+
+    </body>
+</page>

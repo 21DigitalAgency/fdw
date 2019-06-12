@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+      <referenceContainer name="page.wrapper">
+        <container name="key.messages.footer" as="key.messages.footer" htmlTag="div" htmlClass="bottom-messages grey-bg" before="newsletter-signup"/>
+
+        <container name="product.tabs" as="product.tabs" htmlTag="div" htmlClass="product-tabs" before="key.messages.footer"/>
+      </referenceContainer>
+
+      <referenceContainer name="key.messages.footer">
+        <block class="Magento\Cms\Block\Block" name="key.messages">
+            <arguments>
+                <argument name="block_id" xsi:type="string">key_messages</argument>
+            </arguments>
+        </block>
+      </referenceContainer>
+
+      <referenceContainer name="columns" htmlClass="centered-content"/>
+      <referenceContainer name="main" htmlClass="single-product d-flex flex-column flex-md-row col-12">
+        <container name="product.actions" as="product.actions" htmlTag="div" htmlClass="prod-actions col-12 col-md-3 col-lg-3"/>
+      </referenceContainer>
+
+      <referenceContainer name="product.info.media" htmlClass="prod-gallery col-12 col-md-4 col-lg-5"/>
+      <referenceContainer name="product.info.main" htmlClass="prod-summary col-12 col-md-5 col-lg-4"/>
+
+      <move element="product.info.media" destination="main" before="-"/>
+      <move element="product.info.main" destination="main" before="product.info"/>
+      <move element="product.actions" destination="main" after="-"/>
+
+      <move element="product.info.review" destination="product.info.main" before="product.info.overview"/>
+
+      <move element="product.info.price" destination="product.actions" before="-"/>
+      <move element="product.info" destination="product.actions" after="product.info.price"/>
+
+      <move element="product.info.stock.sku" destination="product.info.price" before="product.price.final"/>
+
+      <move element="product.info.details" destination="product.tabs" before="-"/>
+
+      <referenceContainer name="product.info.social" remove="true"/>
+
+      <referenceContainer name="product.info.stock.sku" htmlClass="availability"/>
+
+      <move element="product.info.sku" destination="product.info.price" after="product.price.final"/>
+
+      <referenceBlock name="product.info.details">
+        <block class="Magento\Catalog\Block\Product\View" name="technical.information" template="Magento_Catalog::product/view/technical.phtml" group="detailed_info" >
+          <arguments>
+            <argument translate="true" name="title" xsi:type="string">Technical Information</argument>
+            <argument name="sort_order" xsi:type="string">11</argument>
+          </arguments>
+        </block>
+        <block class="Magento\Catalog\Block\Product\View" name="diagram" template="Magento_Catalog::product/view/diagram.phtml" group="detailed_info" >
+          <arguments>
+            <argument translate="true" name="title" xsi:type="string">Diagram</argument>
+            <argument name="sort_order" xsi:type="string">12</argument>
+          </arguments>
+        </block>
+      </referenceBlock>
+
+    </body>
+</page>
